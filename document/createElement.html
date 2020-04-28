@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //要求：使用js代码创建html标签，并显示在网页上
+        //标签的内容是：<div>今天天气真好啊</div>
+        window.onload=function () {
+            //1. 创建标签对象
+            var divObj = document.createElement("div");//<div></div>
+            var textObj = document.createTextNode("今天天气真好啊");
+            //2. 写标签
+            //divObj.innerHTML="今天天气真好啊";//<div>今天天气真好啊</div>，但还在内存中
+            divObj.appendChild(textObj);//<div>今天天气真好啊</div>，但还在内存中
+            //alert(divObj.innerHTML);
+            //3. 将其显示在网页上，即放入<body>标签下
+            document.body.appendChild(divObj);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

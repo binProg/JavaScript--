@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /*
+        * 需求：当用户点击了 校验 按钮，要获取输入框中的内容，并查看是否合法。
+        * 验证的规则是：必须由字母、数字、下划线组成，长度为5-12位。
+        * */
+        function onclickFun(){
+            //1. 当我们要操作一个标签时，一定要首先获得这个标签对象
+            var unameObj = document.getElementById("username");
+
+            var spanObj = document.getElementById("span01");
+            //2. 获取输入框中的文本内容
+            var unameText = unameObj.value;//value是可变的
+            //2. 获取span标签中的文字内容
+            //innerHTML 这个属性 可读 可写
+            var span_text=spanObj.innerHTML;
+            //alert(span_text);
+            //alert(unameText);
+            //3. 对获取的文本内容进行校验
+            pattern = /^\w{5,12}$/;
+            /*
+            * test()方法用于测试某个字符串，是否匹配规则
+            * 匹配，返回true；否则，返回false.
+            * */
+            if(pattern.test(unameText)){
+                //alert("用户名合法！")
+                //spanObj.innerHTML="用户名合法";
+                spanObj.innerHTML="<img src='right.png' height='19' width='19'>";
+            }else{
+                //alert("用户名非法！")
+                //spanObj.innerHTML="用户名非法";
+                spanObj.innerHTML="<img src='wrong.png' height='19' width='19'>";
+            }
+        }
+    </script>
+</head>
+<body>
+    用户名： <input type="text" id="username" value="hello"/>
+    <!--<span style="color: blueviolet" id="span01"></span>-->
+    <span id="span01">
+        <img src="right.png" width="19" height="19">
+    </span>
+    <button onclick="onclickFun();">校验</button>
+</body>
+</html>

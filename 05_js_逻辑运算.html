@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        /*在JS 语言中，所有的变量都可以作为一个boolean类型的变量去使用。
+
+       0、null、undefined、""（空串）都认为是false
+*/
+        // var a=0;
+        // if(a){
+        //     alert("0为真");
+        // }else{
+        //     alert("0为假");
+        // }
+        //
+        // a=null;
+        // if(a){
+        //     alert("null为真");
+        // }else{
+        //     alert("null为假");
+        // }
+        //
+        // a=undefined;
+        // if(a){
+        //     alert("undefined为真");
+        // }else{
+        //     alert("undefined为假");
+        // }
+        //
+        // a=""
+        // if(a){
+        //     alert("空串为真");
+        // }else{
+        //     alert("空串为假");
+        // }
+
+        /* &&:
+        （1）当表达式全真，last ture。
+        （2）当有一个表达式为假，first false。
+         */
+        var a="abc";
+        var b=true;
+        var c=false;
+        var d=null;
+
+        alert(a&&b);//true
+        alert(b&&a);//abc
+        alert(a&&c);//false
+        alert(c&&a);//false
+        alert(c&&d);//false
+        alert(a&&d&&c);//null
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //onload事件方法
+        function onloadFun(){
+            alert("静态注册onload事件，所有代码");
+        }
+
+        //onload事件动态注册，是 固定 写法
+        window.onload=function () {
+            alert("onload动态注册事件");
+        }
+    </script>
+</head>
+<!--静态注册onload事件，
+        onload事件是浏览器解析万页面后就会自动触发的事件
+
+<body onload='alert("静态注册onload事件")'>
+
+<body onload="onloadFun();">
+-->
+<body>
+</body>
+</html>

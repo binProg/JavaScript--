@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        //静态注册onchange事件
+        function onchangeFun(){
+            alert("奶茶味道发生改变");
+        }
+
+        //动态注册onchange事件
+        window.onload=function () {
+            //1. 获取标签对象
+            var selObj = document.getElementById("sel01");
+            //2. 通过标签对象.事件名=function(){}注册事件
+            selObj.onchange=function () {
+                alert("喜欢的水果发生改变");
+            }
+        }
+    </script>
+</head>
+<body>
+    <!--静态注册onchange事件-->
+    请选择你最喜欢的奶茶味道：
+    <select onchange="onchangeFun();">
+        <option>--奶茶味道--</option>
+        <option>原味</option>
+        <option>焦糖味</option>
+        <option>芝士味</option>
+    </select>
+
+    <br/>
+    <!--动态注册内容改变事件-->
+    请选择你最喜欢的水果：
+    <select id="sel01">
+        <option>--水果--</option>
+        <option>西瓜</option>
+        <option>耙耙柑</option>
+        <option>柠檬</option>
+    </select>
+</body>
+</html>
